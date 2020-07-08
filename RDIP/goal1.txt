@@ -1,1 +1,1 @@
-
+as my opinion there is going to use these Java Script Functions: alert command., getElementById,getElementByName,Math Functions,JQuery,Hide function,visible,redirect.
