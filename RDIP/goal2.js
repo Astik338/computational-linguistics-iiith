@@ -1,4 +1,3 @@
-
 var sentences=["John ate an apple before afternoon.[before afternoon John ate an apple][John before afternoon ate an apple]",
 	"some students like to study in the night.[at night some students like to study]",
 	"John and Mary went to church.[Mary and John went to church]",
@@ -86,7 +85,7 @@ function scoreit(tvo) {
     
     }
   }
-  document.getElementById('score').innerHTML='Score: ' + score + ' from Sentences: ' + goes;
+  //document.getElementById('score').innerHTML='Score: ' + score + ' from Sentences: ' + goes;
   if (selcnt <= 0) pickasentence();
 }
 
@@ -231,6 +230,7 @@ function jumbleword(whatword) {
         while (done_list.indexOf(';' + nchoice + ';') != -1) {
           nchoice = Math.floor(Math.random() * whatword.length);
         }
+        //alert(whatword + ' ... ' + nchoice);
         outs+=whatword.substring(nchoice, eval(1 + nchoice));
         done_list+='' + nchoice + ';';
       }
@@ -245,6 +245,7 @@ function modeonclick(im, wi) {
 }
 
 function addthis() {
+  var idea=prompt("Optionally, add you own sentence, into the mix, as exemplified by ...", "It was great to see them again after all those years. [After all those years it was great to see them again.]");
   if (idea != null) {
     if (idea != '') {
      sentences.push(idea);
